@@ -194,9 +194,10 @@ export default function Home() {
         </div>
         <div className="flex justify-center space-x-2">
           <div className="space-x-1 flex">
-            {Array.from([1, 2, 3, 4, 5]).map(() => {
+            {Array.from([1, 2, 3, 4, 5]).map((data,index) => {
               return (
                 <img
+                  key={index}
                   src="/svg/star.svg"
                   alt="star"
                   className="lg:h-[24px] lg:w-[24px] md:h-[24px] md:w-[24px] h-[16px] w-[16px]"
