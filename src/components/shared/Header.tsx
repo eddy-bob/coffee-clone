@@ -25,7 +25,7 @@ export default function Header() {
             <motion.div
               whileHover={{
                 backgroundColor: "#0000000d",
-                padding: "12px 23px",
+                padding: "11px 15px",
 
                 transition: { duration: 0.1, ease: "linear", stiffness: 200 },
               }} // Increase the scale on hover
@@ -41,7 +41,7 @@ export default function Header() {
               <motion.div
                 whileHover={{
                   backgroundColor: "#0000000d",
-                  padding: "12px 23px",
+                  padding: "11px 17px",
 
                   transition: { duration: 0.1, ease: "linear", stiffness: 200 },
                 }} // Increase the scale on hover
