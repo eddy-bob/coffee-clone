@@ -40,7 +40,7 @@ export default function Home() {
       <Header />
 
       <div
-        className="relative py-16 text-center text-black h-[1400px] overflow-x-hidden"
+        className="relative py-16 text-center text-black md:h-[140vh] overflow-x-hidden"
         style={{ backgroundColor: bgColor }}
       >
         <div className="absolute w-full top-5 left-0  md:block sm:block lg:block hidden z-50">
@@ -194,7 +194,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center space-x-2">
           <div className="space-x-1 flex">
-            {Array.from([1, 2, 3, 4, 5]).map((data,index) => {
+            {Array.from([1, 2, 3, 4, 5]).map((data, index) => {
               return (
                 <img
                   key={index}
