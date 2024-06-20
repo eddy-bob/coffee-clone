@@ -13,9 +13,11 @@ export default function CustomButton(props: IProps) {
   const { title, className, data } = props;
   return (
     <motion.div
-      whileHover={{ padding: "7px 17px" }} // Increase the scale on hover
-      transition={{ duration: 0.2 }}
-      className="relative hover:bg-offwhite rounded-full py-0 "
+      whileHover={{
+        backgroundColor: "#0000000d",
+        transition: { duration: 0.4, ease: "easeIn" },
+      }} // Increase the scale on hover
+      className="relative  rounded-full py-[9px] px-[19px] "
     >
       <div>
         <div

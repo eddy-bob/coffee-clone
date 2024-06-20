@@ -22,20 +22,39 @@ export default function Header() {
       <div className=" px-10 py-6 md:block hidden bg-white w-full">
         <div className="flex justify-between text-black font-bold  text-20  ">
           <div className="space-x-10 flex">
-            <Link href={nav.faq.link}> {nav.faq.title}</Link>
+            <motion.div
+              whileHover={{
+                backgroundColor: "#0000000d",
+                transition: { duration: 0.4, ease: "easeIn" },
+              }} // Increase the scale on hover
+              className="  rounded-full py-[9px] px-[19px] "
+            >
+              <Link href={nav.faq.link}> {nav.faq.title}</Link>
+            </motion.div>
+
             <div className="flex space-x-7">
-              <Link href={nav.wall.link} className="flex">
-                {nav.wall.title}
-                <span className="pl-1">
-                  <Image
-                    className="mt-1"
-                    src={nav.wall.icon}
-                    alt="wall of love"
-                    width={16}
-                    height={15}
-                  />
-                </span>
-              </Link>
+              <motion.div
+                whileHover={{
+                  backgroundColor: "#0000000d",
+                  transition: { duration: 0.4, ease: "easeIn" },
+                }} // Increase the scale on hover
+                className="  rounded-full py-[9px] px-[19px] "
+              >
+                {" "}
+                <Link href={nav.wall.link} className="flex">
+                  {nav.wall.title}
+                  <span className="pl-1">
+                    <Image
+                      className="mt-1"
+                      src={nav.wall.icon}
+                      alt="wall of love"
+                      width={16}
+                      height={15}
+                    />
+                  </span>
+                </Link>
+              </motion.div>
+
               <Link href="/">
                 <CustomSelect title="Resources" data={selectData} />
               </Link>
