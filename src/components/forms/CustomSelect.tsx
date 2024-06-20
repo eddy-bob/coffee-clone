@@ -12,16 +12,16 @@ export default function CustomButton(props: IProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { title, className, data } = props;
   return (
-    <div className="relative">
-      <motion.div
-        whileHover={{
-          transition: {
-            ease: "easeIn",
-          },
-        }}
-        className=" hover:bg-offwhite rounded-[20px]  "
-      >
-        <div className="flex " onClick={() => setIsOpen(!isOpen)}>
+    <motion.div
+      whileHover={{ padding: "7px 17px" }} // Increase the scale on hover
+      transition={{ duration: 0.2 }}
+      className="relative hover:bg-offwhite rounded-full py-0 "
+    >
+      <div>
+        <div
+          className="flex justify-center "
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <p className="">{title}</p>
           <Image
             alt="pointer"
@@ -32,7 +32,7 @@ export default function CustomButton(props: IProps) {
             width={20}
           />
         </div>
-      </motion.div>
+      </div>
       <RenderIf condition={isOpen}>
         <motion.div
           initial={{ opacity: 0 }}
@@ -58,6 +58,6 @@ export default function CustomButton(props: IProps) {
           })}
         </motion.div>
       </RenderIf>
-    </div>
+    </motion.div>
   );
 }
