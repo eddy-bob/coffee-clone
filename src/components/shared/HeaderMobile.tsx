@@ -9,33 +9,34 @@ import { navigationLinks as nav } from "@/utils/statics";
 export default function Header() {
   const [showSideNav, setShowSideNav] = useState(false);
   return (
-    <div className="relative md:hidden block">
+    <div className="relative md:hidden block w-full height-full">
       <RenderIf condition={showSideNav}>
-        <div className="absolute left-0 bg-white height-[100vh] z-50 width-[100vw] p-4">
-          <motion.div
-            initial={{
-              x: -100,
-              opacity: 0,
-            }}
-            animate={{
-              x: 0,
-              opacity: 1,
-              transition: { ease: "easeInOut", duration: 0.3 },
-            }}
-            className="flex flex-col justify-between"
-          >
+        <motion.div
+          initial={{
+            x: -100,
+          }}
+          animate={{
+            x: showSideNav ? 0 : -100,
+            transition: {
+              ease: "easeIn",
+              duration: 0.2,
+            },
+          }}
+          className="absolute left-0  right-0 h-[100vh] bg-white z-50  p-4  text-[19px] font-semibold"
+        >
+          <div className="flex flex-col h-full justify-between">
             <div className="space-y-6">
-              <button
+              <span
                 onClick={() => setShowSideNav(false)}
-                className="bg-transparent border-none outline-none text-xl"
+                className="bg-transparent  flex border-none outline-none text-xl pb-6"
               >
                 X
-              </button>
+              </span>
               <Link href={nav.wall.link}>{nav.faq.title}</Link>
 
-              <Link href={nav.wall.link} className="flex">
+              <Link href={nav.wall.link} className="flex pb-6">
                 {nav.wall.title}
-                <span className="pl-1">
+                <span className="pl-1 mt-1">
                   <Image
                     src={nav.wall.icon}
                     alt="wall of love"
@@ -46,26 +47,26 @@ export default function Header() {
               </Link>
               <Link href="/">Help Center</Link>
               <Link href="/" className="flex">
-                iOS
-                <span className="pl-1">
+                <span className="pr-2 mt-1">
                   <Image
                     src="/svg/apple.svg"
                     alt="apple"
-                    width={16}
-                    height={15}
+                    width={23}
+                    height={23}
                   />
                 </span>
+                iOS
               </Link>
               <Link href="/" className="flex">
-                Android
-                <span className="pl-1">
+                <span className="pr-2 mt-1">
                   <Image
                     src="/svg/android.svg"
                     alt="android"
-                    width={16}
-                    height={15}
+                    width={22}
+                    height={22}
                   />
                 </span>
+                Android
               </Link>
             </div>
             <motion.div
@@ -78,12 +79,12 @@ export default function Header() {
               <Link href={nav.register.link}>
                 <Button
                   title="Start my page"
-                  className="bg-yellow px-4 py-6 rounded-full hover:bg-yellow hover:opacity-[0.8]  text-[15px] text-black font-semibold"
+                  className="bg-yellow  w-full px-4 py-6 rounded-full hover:bg-yellow hover:opacity-[0.8]  text-[15px] text-[#000000] font-semibold"
                 ></Button>
               </Link>
             </motion.div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </RenderIf>
 
       <div className=" px-2 py-3 bg-white w-full">
