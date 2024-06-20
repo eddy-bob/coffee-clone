@@ -21,24 +21,31 @@ export default function Header() {
       </div>
       <div className=" px-10 py-6 md:block hidden bg-white w-full">
         <div className="flex justify-between text-black font-bold  text-20  ">
-          <div className="space-x-10 flex">
+          <div className="">
             <motion.div
               whileHover={{
                 backgroundColor: "#0000000d",
-                transition: { duration: 0.4, ease: "easeIn" },
+                padding: "12px 23px",
+
+                transition: { duration: 0.1, ease: "linear", stiffness: 200 },
               }} // Increase the scale on hover
-              className="  rounded-full py-[9px] px-[19px] "
+              className="absolute  rounded-full py-[9px] px-[19px] "
             >
-              <Link href={nav.faq.link}> {nav.faq.title}</Link>
+              <Link className="" href={nav.faq.link}>
+                {" "}
+                {nav.faq.title}
+              </Link>
             </motion.div>
 
             <div className="flex space-x-7">
               <motion.div
                 whileHover={{
                   backgroundColor: "#0000000d",
-                  transition: { duration: 0.4, ease: "easeIn" },
+                  padding: "12px 23px",
+
+                  transition: { duration: 0.1, ease: "linear", stiffness: 200 },
                 }} // Increase the scale on hover
-                className="  rounded-full py-[9px] px-[19px] "
+                className="absolute  left-[7.5%]  rounded-full py-[9px] px-[19px] "
               >
                 {" "}
                 <Link href={nav.wall.link} className="flex">

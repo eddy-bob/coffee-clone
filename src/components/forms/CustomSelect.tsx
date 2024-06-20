@@ -15,9 +15,11 @@ export default function CustomButton(props: IProps) {
     <motion.div
       whileHover={{
         backgroundColor: "#0000000d",
-        transition: { duration: 0.4, ease: "easeIn" },
+        padding: "12px 23px",
+
+        transition: { duration: 0.1, ease: "linear", stiffness: 200 },
       }} // Increase the scale on hover
-      className="relative  rounded-full py-[9px] px-[19px] "
+      className="absolute  left-[15%] rounded-full py-[9px] px-[19px] "
     >
       <div>
         <div
@@ -45,7 +47,7 @@ export default function CustomButton(props: IProps) {
               ease: "easeIn",
             },
           }}
-          className="bg-white rounded-xl  border p-4 absolute top-[43px]  space-y-2 left-[-8px] shadow-md z-[9999] w-48 font-light font-serif"
+          className="bg-white rounded-xl  border p-4 absolute top-[48px]  space-y-2 left-[-8px] shadow-md z-[9999] w-48 font-light font-serif"
         >
           {data.map((content, index) => {
             return (
