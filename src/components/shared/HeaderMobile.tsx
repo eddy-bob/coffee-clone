@@ -36,7 +36,7 @@ export default function Header() {
 
               <Link href={nav.wall.link} className="flex pb-6">
                 {nav.wall.title}
-                <span className="pl-1 mt-1">
+                <span className="pl-1 mt-[5px]">
                   <Image
                     src={nav.wall.icon}
                     alt="wall of love"
